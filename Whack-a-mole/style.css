@@ -1,31 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-  
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #f5f5f5;
+  background-image: url("./images/whackamole.jpg");
+  background-size: center;
+  background-position: center;
+
+  color: #333;
+}
+
+.navbar {
+  background-color: #7c8c70;
+  color: white;
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#score {
+  font-size: 2.5rem;
+  margin: 20px 0;
+  padding: 10px 20px;
+  background-color: #4a752c;
+  color: white;
+  border-radius: 8px;
+  min-width: 120px;
+  text-align: center;
+}
+
+#whack-a-mole {
+  background-color: #8b5a2b;
+  border: solid 15px #654321;
+  border-radius: 10px;
+  padding: 15px;
+  width: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+.hole {
+  background-image: url("images/hole.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 110px;
+  height: 123px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.mole {
+  background-image: url("images/mole.png");
+}
+
+.game-controls {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 10px 20px;
+  position: center;
+  background-color: #336c51;
+  color: white;
+  border: none;
+  border-radius: 88px;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #3d6124;
+}
+
+.content-section {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none; /* Hidden by default */
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.footer {
+  position: fixed;
+  padding: 15px;
+  bottom: 0;
+  margin-top: 30px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+
+@media (max-width: 800px) {
   #whack-a-mole {
-    background-color: darkolivegreen;
-    border: solid 20px #000;
-    padding: 20px;
-    width: 360px;
-    display: flex;
-    flex-wrap: wrap;
+    width: 300px;
+    padding: 10px;
   }
-  
+
   .hole {
-    background-image: url("images/hole.png");
-    background-size: contain;
-    width: 110px;
-    height: 123px;
-    margin: 5px;
+    width: 90px;
+    height: 100px;
+    margin: 3px;
   }
-  
-  .mole {
-    background-image: url("images/mole.png");
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
   }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

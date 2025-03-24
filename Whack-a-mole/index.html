@@ -2,22 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Whack-a-mole</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whack-a-Mole</title>
   <link rel="stylesheet" href="style.css"/>
   <script src="index.js" defer></script>
 </head>
 <body> 
-  <h1 id="score">0</h1>
-  <div id="whack-a-mole">
-    <div class="hole"></div>
-    <div class="hole"></div>
-    <div class="hole"></div>
-    <div class="hole"></div>
-    <div class="hole"></div>
-    <div class="hole"></div>
-    <div class="hole"></div>
-    <div class="hole"></div>
-    <div class="hole"></div>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h2>Whack-a-Mole</h2>
+    <div class="nav-links">
+      <a href="#" id="home-link">Home</a>
+      <a href="#" id="high-scores-link">High Scores</a>
+      <a href="#" id="how-to-play-link">How to Play</a>
+    </div>
+  </nav>
+  <section id="high-scores-content" class="content" style="display: none;">
+    <h1>High Scores</h1>
+    <ul id="high-scores-list">
+      <li>Player 1: 50</li>
+      <li>Player 2: 40</li>
+      <li>Player 3: 30</li>
+    </ul>
+  </section>
+
+    <!-- How to Play Section -->
+    <div id="how-to-play" class="content-section" style="display: none;">
+      <h2>How to Play</h2>
+      <p>Welcome to <strong>Whack-a-Mole!</strong> Your goal is to hit as many moles as possible before time runs out.</p>
+      
+      <h3>🎮 Game Rules:</h3>
+      <ul>
+        <li>Moles will randomly pop out of the holes.</li>
+        <li>Click (or tap) on the moles to score points.</li>
+        <li>The faster you react, the higher your score!</li>
+        <li>Be quick! Moles disappear after a short time.</li>
+      </ul>
+      
+      <h3>⚡ Controls:</h3>
+      <ul>
+        <li><strong>Start Game:</strong> Click the "Start Game" button to begin.</li>
+        <li><strong>Click Moles:</strong> Use your mouse or touchscreen to whack the moles.</li>
+        <li><strong>Reset:</strong> Click the "Reset" button to restart the game.</li>
+      </ul>
+      
+      <h3>🏆 Scoring:</h3>
+      <ul>
+        <li>Each successful whack gives you <strong>+1</strong> point.</li>
+        <li>Try to beat your highest score!</li>
+      </ul>
+    </div>
+  
+  <div class="game-container" id="game-container">
+    <h1 id="score">0</h1>
+    <div id="whack-a-mole">
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+      <div class="hole"></div>
+    </div>
+    
+    <div class="game-controls">
+      <button class="btn" id="start-btn">Start Game</button>
+      <button class="btn" id="reset-btn" style="display: none;">Reset</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>© 2025 Whack-a-Mole Game | All Rights Reserved</p>
   </div>
 </body>
 </html>
